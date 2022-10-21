@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- <script>
+      name="anuj"
+      handle="@anujthakur"
+      function NameComponent({name}) {
+        return React.createElement("h1", null,name)
+      }
+
+      function HandleComponent({handle}) {
+        return React.createElement("h3", null, handle)
+      }
+
+     const wrapperElement=React.createElement('div',{id:'wrapper'},
+     React.createElement(NameComponent,{ name:"anuj"}),
+     React.createElement(HandleComponent,{handle:"@anujthakur"}))
+
+
+     ReactDOM.render(
+        wrapperElement,
+        document.getElementById('root')
+     )
+    </script>-->
+    
+    
+    <script>
+      name="anuj"
+      handle="@anujthakur"
+      function NameComponent(props) {
+        return React.createElement("h1", null,props.name)
+      }
+
+      function HandleComponent(props) {
+        return React.createElement("h3", null, props.handle)
+      }
+
+     const wrapperElement=React.createElement('div',{id:'wrapper'},
+     React.createElement(NameComponent,{ name:"anuj"}),
+     React.createElement(HandleComponent,{handle:"@anujthakur"}))
+
+
+
+     const  root=ReactDOM.createRoot(document.getElementById('root')
+     );
+     root.render(
+        wrapperElement,
+     )
+    </script>
+  </body>
+</html>
