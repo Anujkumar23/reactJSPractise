@@ -18,15 +18,22 @@
   <body>
     <div id="root"></div>
     <script type="text/babel">
+   class Exp extends React.Component{
+     render(){
+        const count=0;
+        return(
+            <div>
+                {count &&
+                <h1>Message:{Count}</h1>}
+                </div>
+        )
+     }
+   }
+   const root = ReactDOM.createRoot(document.getElementById("root"));
+     root.render(<Exp/>);
 
-        <button onClick={(e)=>this.deleteRow(id,e)}></button>
-
-
-
-
-
-        const root = ReactDOM.createRoot(document.getElementById("root"));
-      root.render(<Toggle/>)
     </script>
-  </body>
-</html>
+    </body>
+    </html>
+
+
